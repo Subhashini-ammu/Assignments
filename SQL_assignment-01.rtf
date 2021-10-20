@@ -1,0 +1,52 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Cambria;}{\f1\fnil\fcharset0 Palatino Linotype;}{\f2\fnil\fcharset0 Arial Black;}{\f3\fnil\fcharset0 Arial;}}
+{\colortbl ;\red0\green0\blue0;\red192\green80\blue77;\red0\green176\blue80;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qr\cf1\b\f0\fs28\lang9     SUBHASHINI D \par
+
+\pard\sa200\sl276\slmult1\qc\tab\tab\tab\tab\tab\tab\tab\tab\tab    (21058)  \par
+\cf0\ul\f1\fs32 SQL Assignment-01\f2\fs24\par
+
+\pard 
+{\pntext\f3 1.\tab}{\*\pn\pnlvlbody\pnf3\pnindent360\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sl360\slmult1\cf2\ulnone\f3 Write a query to list all the employees who are working as clerk\line\cf0\fs20 SELECT ENAME ,  EMPNO, DEPTNO, JOB\line FROM  EMP\line WHERE JOB = 'CLERK' ;\line\cf2\fs24\par
+{\pntext\f3 2.\tab}Write a query to list the employees who are working as clerks or managers\line\cf0\fs20 SELECT ENAME, EMPNO, DEPTNO, JOB\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE JOB IN ('CLERK', 'MANAGER') ;\cf2\fs24\line\par
+{\pntext\f3 3.\tab}Write a query to get the current date\line\cf0\fs20 SELECT GETDATE() ;\cf2\fs24\line\par
+{\pntext\f3 4.\tab}Write a query to list the employees whose salaries are within the range of 500 and 1000\line\cf0\fs20 SELECT ENAME, JOB, SAL\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE SAL BETWEEN 500 AND 1000 ;\cf2\fs24\line\par
+{\pntext\f3 5.\tab}Write a query to list the employees who have joined in the month of December\line\cf0\fs20 SELECT ENAME, JOB, HIREDATE\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE HIREDATE LIKE '%-12-%' ;\cf2\fs24\line\par
+{\pntext\f3 6.\tab}Write a query to list the employees whose salaries are not within  the range of 1000 and 2500\line\cf0\fs20 SELECT EMPNO, ENAME, SAL\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE SAL NOT BETWEEN 1000 AND 2500 ;\cf2\fs24\line\par
+{\pntext\f3 7.\tab}Write a query who are getting 800, 950, 3000,5000\line\cf0\fs20 SELECT EMPNO, ENAME, SAL\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE SAL IN (800, 950, 3000, 5000)\cf2\fs24\line\cf0\fs20 ORDER BY SAL ;\cf2\fs24\line\par
+{\pntext\f3 8.\tab}To list all the employees whose names are having \lquote L\rquote  as second character\line\cf0\fs20 SELECT * \cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE ENAME LIKE '_L%' ;\cf2\fs24\line\par
+{\pntext\f3 9.\tab}To list all the employees whose names are having \lquote D\rquote  as last character\line\cf0\fs20 SELECT * \cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE ENAME LIKE '%D' ;\cf2\fs24\line\par
+{\pntext\f3 10.\tab}To list all the employees whose names are having just 5 characters as length?\line\cf0\fs20 SELECT * \line FROM EMP\line WHERE ENAME LIKE '_____' ;\line\tab     \cf3 (OR)\line\cf0 SELECT * \line FROM EMP\line WHERE LEN(ENAME) = 5 ;\line\cf2\fs24\par
+{\pntext\f3 11.\tab}To list all the employees whose names are starting with \lquote T\rquote  and ending with \lquote R\rquote\line\cf0\fs20 SELECT * \cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE ENAME LIKE 'T%R' ;\cf2\fs24\line\par
+{\pntext\f3 12.\tab}Display those employees who's name contains "A"?\line\cf0\fs20 SELECT * \line FROM EMP\line WHERE ENAME LIKE '%A%' ;\line\par
+{\pntext\f3 13.\tab}\cf2\fs24 Display those employee who joined the company before 19th of the month?\line\cf0\fs20 SELECT * \cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE DATEPART ( DD, HIREDATE ) < 19\cf2\fs24\line\cf0\fs20 ORDER BY HIREDATE ;\cf2\fs24\line\par
+{\pntext\f3 14.\tab}What is the employee number of 'James'\line\cf0\fs20 SELECT ENAME, EMPNO\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE ENAME='JAMES' ;\cf2\fs24\line\par
+{\pntext\f3 15.\tab}What is the salary of 'king'?\line\cf0\fs20 SELECT ENAME, SAL\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE ENAME='KING' ;\cf2\fs24\line\par
+{\pntext\f3 16.\tab}Who is the President for organization?\line\cf0\fs20 SELECT ENAME, JOB\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE JOB='PRESIDENT' ;\cf2\fs24\line\par
+{\pntext\f3 17.\tab}List all details of all the managers?\line\cf0\fs20 SELECT * \cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE JOB='MANAGER' ;\cf2\fs24\line\par
+{\pntext\f3 18.\tab}Give employee details for employees drawing commission?\line\cf0\fs20 SELECT * \cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE COMM IS NOT NULL ;\cf2\fs24\line\par
+{\pntext\f3 19.\tab}List employees who joined before april-1981?\line\cf0\fs20 SELECT * \cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE HIREDATE < ('01-APR-81') ;\cf2\fs24\line\par
+{\pntext\f3 20.\tab}What is the salary of following: \line King, Blake, Ford, Smith\line\cf0\fs20 SELECT ENAME, SAL\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE ENAME IN ( 'KING', 'BLAKE', 'FORD',  'SMITH' ) ;\cf2\fs24\line\par
+{\pntext\f3 21.\tab}Who is drawing salary less than 3500\line\cf0\fs20 SELECT EMPNO, ENAME, SAL\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE SAL < 3500 ;\cf2\fs24\line\par
+{\pntext\f3 22.\tab}List the details of all the clerks\line\cf0\fs20 SELECT *\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE JOB = 'CLERK' ;\cf2\fs24\line\par
+{\pntext\f3 23.\tab}what is the annual salary for each the employees\line\cf0\fs20 SELECT EMPNO, ENAME, (SAL, SAL*12) AS ANNUAL_SAL\cf2\fs24\line\cf0\fs20 FROM EMP ;\cf2\fs24\line\par
+{\pntext\f3 24.\tab}if there is a hike in monthly salary by 20% for ford, what will be his annual Salary\line\cf0\fs20 SELECT ENAME, SAL, (SAL*0.2*12) AS 'ANNUAL_SAL'\cf2\fs24\line\cf0\fs20 FROM EMP \cf2\fs24\line\cf0\fs22 WHERE ENAME='FORD' ;\cf2\fs24\line\par
+{\pntext\f3 25.\tab}What is the total salary for each department\line\cf0\fs20 SELECT DEPTNO, SUM(SAL) AS SUM_SAL\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 GROUP BY DEPTNO ;\cf2\fs24\line\par
+{\pntext\f3 26.\tab}Who is drawing the lowest salary in dept 10\line\cf0\fs20 SELECT DEPTNO, MIN(SAL) AS 'MIN_SAL'\cf2\fs24\line\cf0\fs20 FROM EMP \cf2\fs24\line\cf0\fs20 WHERE DEPTNO = 10 \cf2\fs24\line\cf0\fs20 GROUP BY DEPTNO;\cf2\fs24\line\par
+{\pntext\f3 27.\tab}What is the average salary for Managers\line\cf0\fs20 SELECT JOB, AVG(SAL) AS 'AVG_SAL'\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE JOB = 'MANAGER'\cf2\fs24\line\cf0\fs20 GROUP BY JOB ;\cf2\fs24\line\par
+{\pntext\f3 28.\tab}What is the total salary for salesman\line\cf0\fs20 SELECT JOB, SUM(SAL) AS 'TOTAL_SAL'\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE JOB = 'SALESMAN'\cf2\fs24\line\cf0\fs20 GROUP BY 'JOB' ;\cf2\fs24\line\par
+{\pntext\f3 29.\tab}Which department is having the lowest average salary?\line\cf0\fs20 SELECT DEPTNO, AVG(SAL) AS 'LOWEST_AVG_SAL'\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 GROUP BY 'DEPTNO' \cf2\fs24\line\cf0\fs20 HAVING AVG(SAL) < (SELECT AVG(SAL)\cf2\fs24\line\tab\tab\tab\cf0\fs20 FROM EMP) ;\cf2\fs24\line\par
+{\pntext\f3 30.\tab}How many persons are in each role\line\cf0\fs20 SELECT DEPTNO, COUNT(EMPNO) AS 'EMP_COUNT'\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 GROUP BY DEPTNO ;\cf2\fs24\line\par
+{\pntext\f3 31.\tab}What is the highest salary among analyst\line\cf0\fs20 SELECT JOB, MAX(SAL) AS 'MAX_SAL'\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE JOB = 'ANALYST'\cf2\fs24\line\cf0\fs20 GROUP BY JOB ;\cf2\fs24\line\par
+{\pntext\f3 32.\tab}What is the highest commission paid\line\cf0\fs20 SELECT MAX(COMM) AS 'MAX_COMM'\cf2\fs24\line\cf0\fs20 FROM EMP\cf2\fs24\line\cf0\fs20 WHERE COMM IS NOT NULL\cf2\fs24  \cf0\fs20 ;\cf2\fs24\line\par
+{\pntext\f3 33.\tab}How many departments are there\line\cf0\fs20 SELECT COUNT(*) AS 'DEPT_COUNT'\cf2\fs24\line\cf0\fs20 FROM DEPT ;\cf2\fs24\line\par
+{\pntext\f3 34.\tab}List the names in which 3rd\~ character is L\par
+
+\pard\sl360\slmult1\tab\cf0\fs20 SELECT ENAME\par
+\tab FROM EMP\par
+\tab WHERE ENAME LIKE '__L%' ;\cf2\fs24\par
+\par
+\b0\par
+}
+ 
